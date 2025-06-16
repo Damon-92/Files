@@ -4793,6 +4793,23 @@ blockquote {
         text-align: right
     }
 
+.gallery_img {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.gallery_img_text {
+  max-width: 400px;
+  padding-top: 1rem;
+  font-size: 1rem;
+  color: #C5B6AF;
+  font-family: 'Parabole Text', sans-serif;
+  line-height: 1.5;
+  flex: 1;
+}
+
     .hero_img--ca1 {
         object-position: 25% 50%;
         display: block
@@ -4945,6 +4962,20 @@ blockquote {
 @media screen and (max-width: 767px) {
     #w-node-_3b8600f1-764f-0269-1890-16941aeae692-1aeae5ec {
         grid-area:span 1/span 1/span 1/span 1
+
+@media (max-width: 768px) {
+  .gallery_img {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gallery_img_text {
+    padding-top: 1.5rem;
+    text-align: center;
+  }
+}
+
+
     }
 }
 
