@@ -2755,7 +2755,7 @@ blockquote {
 
 .section_divider_base {
     color: var(--theme--text);
-    background-image: linear-gradient(#4f009e,rgba(79,0,158,0));
+    background-image: linear-gradient(#2596be, rgba(37, 150, 190, 0));
     width: 100%;
     height: 100%;
     margin-top: -.5px;
@@ -3463,7 +3463,7 @@ blockquote {
 
 .ugc_hero_grad.is-bottom {
     z-index: 2;
-    background-image: linear-gradient(rgba(19,19,19,0),#131313);
+    background-color: #2596be;
     top: auto;
     bottom: 0%;
     left: 0%;
