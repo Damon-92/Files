@@ -2864,17 +2864,21 @@ blockquote {
 }
 
 .cursor_dot {
-    aspect-ratio: 1;
-    border: 1px solid var(--swatch--light);
+    border: none;
     border-radius: var(--radius--round);
-    background-color: rgba(197,182,175,.05);
-    width: .125rem
+    width: .125rem;
+    background-image: radial-gradient(circle, #2596be, #a855f7); /* subtle idle */
+    background-size: 200% 200%;
+    transition: all 0.4s ease;
 }
 
+
 .cursor_dot.is-hover {
-    border-color: var(--swatch--brand);
-    background-color: rgba(235,251,29,.2);
-    width: 3.5rem
+    width: 3.5rem;
+    background-image: linear-gradient(135deg, #2596be, #a855f7); /* full hover pulse */
+    background-size: 400% 400%;
+    animation: pulseGradient 2s ease infinite;
+    border: none;
 }
 
 .cursor_line_top {
@@ -4983,3 +4987,10 @@ blockquote {
     font-style: normal;
     font-display: swap;
 }
+
+@keyframes pulseGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
