@@ -4793,12 +4793,6 @@ blockquote {
         text-align: right
     }
 
-.gallery_img {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 2rem;
-}
 
 .gallery_img_text {
   max-width: 400px;
