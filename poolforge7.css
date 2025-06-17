@@ -4972,6 +4972,51 @@ blockquote {
   .gallery_img_text {
     padding-top: 1.5rem;
     text-align: center;
+
+/* === PHASE FLY-IN (centred) ======================= */
+.phase-gallery {                     /* parent wrapper */
+  position: relative;
+  height: 100vh;                     /* one viewport per gallery */
+  overflow: hidden;
+}
+
+.phase-gallery .gallery_card {       /* slide wrapper  */
+  /* restore the absolute-stack rules Webflow generated */
+  position: absolute !important;
+  top: 0; bottom: 0;                 /* centre vertically */
+  left: 0; right: 0; margin: auto;   /* centre horizontally */
+  width: 45%;
+  aspect-ratio: 4/5;
+  overflow: hidden;
+}
+
+.phase-gallery .gallery_card._600 { transform: translateZ(-600px); }
+.phase-gallery .gallery_card._500 { transform: translateZ(-500px); }
+.phase-gallery .gallery_card._400 { transform: translateZ(-400px); }
+.phase-gallery .gallery_card._300 { transform: translateZ(-300px); }
+.phase-gallery .gallery_card._200 { transform: translateZ(-200px); }
+.phase-gallery .gallery_card._100 { transform: translateZ(-100px); }
+
+.phase-caption{                     /* reusable caption style */
+  margin-top: -4vh;
+  max-width: 90%;
+  background: rgba(19,19,19,.7);
+  padding: 1.25rem 2rem;
+  color:#D3C2BB;
+  font: 1.25rem/1.7 'Parabole Text',sans-serif;
+  border-radius:12px;
+  backdrop-filter: blur(6px);
+  pointer-events:none;
+  text-align:center;
+}
+/* ================================================== */
+
+/*  ❗ kills the late “flex row” override that breaks the stack */
+.phase-gallery .gallery_card{display:block !important;}  /* overrides the flex rule you saw at the very end of the CSS */
+
+
+
+
   }
 }
 
