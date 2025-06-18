@@ -4793,6 +4793,12 @@ blockquote {
         text-align: right
     }
 
+.gallery_img {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2rem;
+}
 
 .gallery_img_text {
   max-width: 400px;
@@ -4966,70 +4972,6 @@ blockquote {
   .gallery_img_text {
     padding-top: 1.5rem;
     text-align: center;
-  }
-
-/* --- keep everything that was already in poolforge8.css ABOVE this line --- */
-/* ========================================================================== */
-
-/*  PHASE FLY-IN  — centred, 6-slide stack
-    -------------------------------------------------
-    ─ six .gallery_card elements sit on one z-stack
-    ─ each one is horizontally + vertically centred
-    ─ depth comes from the old _600 … _100 classes
-    ─ captions use .phase-caption
-    ------------------------------------------------- */
-
-.phase-gallery{
-  position:relative;
-  height:100vh;           /* one full viewport per phase */
-  overflow:hidden;
-}
-
-.phase-gallery .gallery_card{
-  position:absolute !important;   /* wins over late flex rule */
-  top:0;bottom:0;left:0;right:0;
-  margin:auto;                    /* centres horizontally + vertically */
-  width:45%;
-  aspect-ratio:4/5;
-  overflow:hidden;
-  display:block !important;       /* kills `.gallery_img{display:flex}` override */
-}
-.phase-gallery .gallery_card img{ width:100%; height:auto; display:block; }
-
-/* depth (keeps your GSAP / ScrollTrigger logic unchanged) */
-.phase-gallery ._600{transform:translateZ(-600px);}
-.phase-gallery ._500{transform:translateZ(-500px);}
-.phase-gallery ._400{transform:translateZ(-400px);}
-.phase-gallery ._300{transform:translateZ(-300px);}
-.phase-gallery ._200{transform:translateZ(-200px);}
-.phase-gallery ._100{transform:translateZ(-100px);}
-
-/* caption reused everywhere */
-.phase-caption{
-  margin-top:-4vh;
-  max-width:90%;
-  background:rgba(19,19,19,.7);
-  padding:1.25rem 2rem;
-  color:#D3C2BB;
-  font:1.25rem/1.7 'Parabole Text',sans-serif;
-  border-radius:12px;
-  backdrop-filter:blur(6px);
-  pointer-events:none;
-  text-align:center;
-}
-
-/* --------------------------------------------------------------------------
-   NOTHING BELOW HERE CHANGES — you can leave the long Webflow stylesheet
-   exactly as it was.
-   -------------------------------------------------------------------------- */
-
-
-/*  ❗ kills the late “flex row” override that breaks the stack */
-.phase-gallery .gallery_card{display:block !important;}  /* overrides the flex rule you saw at the very end of the CSS */
-
-
-
-
   }
 }
 
