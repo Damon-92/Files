@@ -2962,7 +2962,7 @@ blockquote {
     -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
     text-align: center;
-    background-color: rgba(235,251,29,.1);
+    background-color: rgba(0,224,255,.1);
     justify-content: center;
     align-items: center;
     width: 100%;
